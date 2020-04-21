@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="App_Config\Modules\**\*.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="App_Config\Modules\**\*.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="App_Config\Modules\Stendahls.Sc.SolrConfig\Stendahls.Sc.SolrSchemaChanges.config.example" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="App_Config\Modules\Stendahls.Sc.SolrConfig\Stendahls.Sc.SolrSchemaChanges.config.example" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="2019.1.3" />
+    <PackageReference Include="Sitecore.Kernel" Version="9.3.0" />
+    <PackageReference Include="Sitecore.ContentSearch" Version="9.3.0" />
+    <PackageReference Include="Sitecore.ContentSearch.Linq.Solr" Version="9.3.0" />
+    <PackageReference Include="Sitecore.ContentSearch.SolrProvider" Version="9.3.0" />
+  </ItemGroup>
+
+</Project>

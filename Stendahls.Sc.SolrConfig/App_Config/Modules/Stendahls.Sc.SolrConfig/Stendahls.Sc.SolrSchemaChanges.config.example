@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/" xmlns:set="http://www.sitecore.net/xmlconfig/set/"
+               xmlns:role="http://www.sitecore.net/xmlconfig/role/" xmlns:env="http://www.sitecore.net/xmlconfig/env/"
+               xmlns:search="http://www.sitecore.net/xmlconfig/search/" xmlns:debug="http://www.sitecore.net/xmlconfig/debug/">
+  <!-- This is a sample file -->
+  <sitecore search:require="Solr">
+    <contentSearch>
+      <indexConfigurations>
+        <solrManagedSchema type="Stendahls.Sc.SolrConfig.Schema.SolrSchemaConfiguration">
+          <fieldTypes hint="raw:AddFieldType">
+            <!-- Example of adding/modifying field types -->
+            <!--<fieldType name="text_sv" class="solr.TextField" positionIncrementGap="100">
+              <analyzer type="index">
+                <tokenizer class="solr.StandardTokenizerFactory"/>
+                <filter class="solr.StopFilterFactory" format="snowball" words="lang/stopwords_sv.txt" ignoreCase="true"/>
+                <filter class="solr.WordDelimiterGraphFilterFactory" catenateNumbers="1" generateNumberParts="1" 
+                    splitOnCaseChange="1" generateWordParts="1" splitOnNumerics="1" catenateAll="0" catenateWords="1"/>
+                <filter class="solr.FlattenGraphFilterFactory"/>
+                <filter class="solr.LowerCaseFilterFactory"/>
+                <filter class="solr.SnowballPorterFilterFactory" language="Swedish"/>
+              </analyzer>
+              <analyzer type="query">
+                <tokenizer class="solr.StandardTokenizerFactory"/>
+                <filter class="solr.StopFilterFactory" format="snowball" words="lang/stopwords_sv.txt" ignoreCase="true"/>
+                <filter class="solr.WordDelimiterGraphFilterFactory" catenateNumbers="1" generateNumberParts="1" 
+                    splitOnCaseChange="1" generateWordParts="1" splitOnNumerics="1" catenateAll="0" catenateWords="1"/>
+                <filter class="solr.LowerCaseFilterFactory"/>
+                <filter class="solr.SnowballPorterFilterFactory" language="Swedish"/>
+              </analyzer>
+            </fieldType>-->
+          </fieldTypes>
+
+          <fields hint="raw:AddField">
+            <!-- Examples of adding/modifying static fields to the schema -->
+            <!--<field name="_showfrom" type="pdate" indexed="true" stored="true"/>-->
+            <!--<field name="_showuntil" type="pdate" indexed="true" stored="true"/>-->
+          </fields>
+
+          <dynamicFields hint="raw:AddDynamicField">
+            <!-- Examples of adding/modifying dynamic fields to the schema -->
+            <!--<dynamicField name="*_t_lt" type="text_general" indexed="true" stored="true"/>-->
+            <!--<dynamicField name="*_t_pl" type="text_general" indexed="true" stored="true"/>-->
+            <!--<dynamicField name="*_fm" type="pfloats" indexed="true" stored="true"/>-->
+            <!--<dynamicField name="*_dm" type="pdoubles" indexed="true" stored="true"/>-->
+          </dynamicFields>
+
+          <copyFields hint="raw:AddCopyField">
+            <!-- Example of adding copyField to the schema -->
+            <!--<copyField source="_displayname" dest="displayname_s" />-->
+          </copyFields>
+        </solrManagedSchema>
+      </indexConfigurations>
+    </contentSearch>
+  </sitecore>
+</configuration>
+

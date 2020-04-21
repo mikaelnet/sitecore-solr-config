@@ -1,0 +1,6 @@
+*.ps1	text
+*.min.js	text eol=lf
+*.min.css	text eol=lf
+
+# Do not adjust line endings on Sitecore .item files
+*.item -text
